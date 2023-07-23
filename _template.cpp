@@ -18,9 +18,9 @@ int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
     
-    ll t = 1;
-    cin>>t;
-    while(t--){
+    ll tt = 1;
+    cin>>tt;
+    while(tt--){
         ll n;
         cin>>n;
         ll a[n];

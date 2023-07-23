@@ -1,4 +1,4 @@
-const ll MAXN = 1e5+5;
+const ll N = 1e5+5;
 const ll P = 998244353;
 using i64 = long long;
 // assume -P <= x < 2P
@@ -80,9 +80,9 @@ struct Z {
     }
 };
 
-Z fact[MAXN+1], invfact[MAXN+1];
+Z fact[N+1], invfact[N+1];
 void initCombinatorics(){
-    ll n = MAXN;
+    ll n = N;
     fact[0]=1;
 
     for(ll i=1; i<=n; i++){
