@@ -1,8 +1,3 @@
-#pragma once 
-
-#include <iostream>
-#include <numeric>
-
 struct Fraction {
     int64_t num = 1;
     int64_t den = 1;
