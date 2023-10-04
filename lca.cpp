@@ -36,6 +36,8 @@ void lca_build_tree (int i, int l, int r)
 
 void lca_prepare (const graph & g, int root)
 {
+	lca_h.clear(), lca_dfs_list.clear(), lca_first.clear(), lca_tree.clear();
+    lca_dfs_used.clear();
 	int n = (int) g.size();
 	lca_h.resize (n);
 	lca_dfs_list.reserve (n*2);

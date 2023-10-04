@@ -1,12 +1,3 @@
-#include <algorithm>
-#include <cmath>
-#include <iostream>
-#include <map>
-#include <vector>
-
-using namespace std;
-
-
 //! ������ 64-������� �����
 long long myabs (long long n)
 {
@@ -733,26 +724,26 @@ void get_divisors(std::map<T, unsigned> & mp, std::vector<T>& result){
     rec(0, (T)1, result, rec_vec);
 }
 
-int main()
-{
-	typedef long long base;
+// int main()
+// {
+// 	typedef long long base;
 
-	base n;
-	cin >> n;
+// 	base n;
+// 	cin >> n;
 
-	map <base, unsigned> m;
-	factorize (n, m, (long long) 0);
+// 	map <base, unsigned> m;
+// 	factorize (n, m, (long long) 0);
 
-	for(auto& [k, v]:m){
-		cout<<k<<' '<<v<<endl;
-	}
+// 	for(auto& [k, v]:m){
+// 		cout<<k<<' '<<v<<endl;
+// 	}
 
-    cout<<endl;
+//     cout<<endl;
 
-    vector<base> divisors;
-    get_divisors(m, divisors);
-    for(auto x : divisors){
-        cout<<x<<' ';
-    }
+//     vector<base> divisors;
+//     get_divisors(m, divisors);
+//     for(auto x : divisors){
+//         cout<<x<<' ';
+//     }
 
-}
+// }
