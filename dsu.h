@@ -18,7 +18,7 @@ public:
         return vertex;
     }
 
-    void merge(int lhs, int rhs) { // groups 2 sets into one: prent of root rhs - lhs
+    bool merge(int lhs, int rhs) { // groups 2 sets into one: prent of root rhs - lhs
         lhs = getRoot(lhs);
         rhs = getRoot(rhs);
         if (lhs != rhs) {
@@ -27,7 +27,9 @@ public:
 //                }
             parent[rhs] = lhs;
             size[lhs] += size[rhs];
+            return true;
         }
+        return false;
     }
 
     size_t getSize(size_t vertex) {
