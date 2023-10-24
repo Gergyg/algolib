@@ -18,6 +18,9 @@ int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
     
+    // freopen("output.txt", "w",stdout);
+    // freopen("input.txt", "r", stdin);
+    
     ll tt = 1;
     cin>>tt;
     while(tt--){
