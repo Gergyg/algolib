@@ -3,7 +3,7 @@ ll t[4 * N], d[4 * N], p[4 * N];
 
 void push(ll v, ll tl, ll tr){
     if(v >= 4*N) return;
-    if(p[v] != 0 && d[v] != 0) p[v] += d[v], d[v] = 0;
+    if(p[v] != 0 && d[v] != 0) p[v] += d[v];
     if(p[v]!=0){
         t[v] = (tr - tl + 1) * p[v];
     } else if (d[v]!=0){
@@ -15,14 +15,15 @@ void push(ll v, ll tl, ll tr){
         p[v*2+1] = p[v];
         d[v*2] = 0;
         d[v*2 + 1] = 0;
-        d[v] = 0;
-        p[v] = 0;
     }
+
 	if(d[v]!=0 && v*2+1 < 4*N){
 		d[v*2] += d[v];
 		d[v*2+1] += d[v];
-		d[v] = 0;
 	}
+
+    d[v] = 0;
+	p[v] = 0;
 }
 
 void update(ll v, ll tl, ll tr, ll l, ll r, ll add){
