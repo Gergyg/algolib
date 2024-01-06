@@ -10,8 +10,8 @@ void build(ll v, ll tl, ll tr){
 	}
 
 	ll tm = (tl+tr)/2;
-	build(v*2, tl, tm, ind);
-	build(v*2+1, tm+1, tr, ind);
+	build(v*2, tl, tm);
+	build(v*2+1, tm+1, tr);
 	t[v] = min(t[v*2], t[v*2+1]);
 	p[v] = 0;
 }
