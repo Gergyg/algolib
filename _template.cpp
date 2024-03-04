@@ -5,22 +5,22 @@
 #define F first
 #define pb push_back
 #define eb emplace_back
+#define eb emplace_back
 #define mp make_pair
 #define yes cout<<"YES\n";
 #define no cout<<"NO\n";
 using namespace std;
+typedef vector<ll> vi;  
 typedef vector<ll> vi;  
 typedef vector<vector<ll>> vvi;
 typedef pair<ll,ll> pll;
 typedef vector<pll> vpll;
 #ifdef DEBUG
     #define debug(...) (std::cout << "DBG : ", show(std::cout, #__VA_ARGS__, __VA_ARGS__))
-
     template<typename H1>
     std::ostream& show(std::ostream& out, const char* label, H1&& value) {
         return out << label << "=" << std::forward<H1>(value) << '\n';
     }
-
     template<typename H1, typename ...T>
     std::ostream& show(std::ostream& out, const char* label, H1&& value, T&&... rest) {
     const char* pcomma = strchr(label, ',');
@@ -65,6 +65,6 @@ int32_t main() {
         
         
     }
-
+ 
     return 0;
 }
