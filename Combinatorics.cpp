@@ -31,5 +31,6 @@ void initCombinatorics(){
 }
  
 ll C(ll n, ll k){
+    if(n < k || k < 0) return 0;
     return ((fact[n]*invfact[k])%MOD*invfact[n-k])%MOD;
 }
