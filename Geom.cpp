@@ -1,10 +1,6 @@
 struct P {
     ll x, y;
 
-    void read(){
-        cin >> x >> y;
-    }
-
     P operator-(const P& b) const{
         return {x - b.x, y - b.y};
     }
@@ -26,6 +22,8 @@ struct P {
         else return x < b.x;
     }
 };
+
+istream &operator >> (istream &in, P &p) { return in >> p.x >> p.y; }
 
 bool is_intersect(vector<P> a){
 
