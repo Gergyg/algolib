@@ -6,6 +6,7 @@
 #define pb push_back
 #define eb emplace_back
 #define mp make_pair
+#define all(x) begin(x), end(x)
 #define yes cout<<"YES\n";
 #define no cout<<"NO\n";
 using namespace std;
@@ -44,26 +45,17 @@ void testcase(){
 int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
-    
+
     // freopen("output.txt", "w",stdout);
     // freopen("input.txt", "r", stdin);
-    
+
     ll tt = 1;
     cin>>tt;
     while(tt--){
 
-        // testcase();
+        testcase();
 
-        // cout << testcase() << endl;
-
-        // if(testcase()){
-        //     yes
-        // } else {
-        //     no
-        // }
-        
-        
     }
- 
+
     return 0;
 }

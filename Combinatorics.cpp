@@ -1,6 +1,6 @@
 const ll MOD = 998244353;
 const ll MAXN = 1e6+6;
- 
+
 ll md(ll a, ll b){ //binMODpow
     if(!b)
         return 1;
@@ -13,7 +13,7 @@ ll md(ll a, ll b){ //binMODpow
  
     return ans;
 }
- 
+
 ll fact[MAXN+1], invfact[MAXN+1];
 void initCombinatorics(){
     ll n = MAXN;
@@ -29,7 +29,7 @@ void initCombinatorics(){
         invfact[i-1] = invfact[i] * i % MOD;
     }
 }
- 
+
 ll C(ll n, ll k){
     if(n < k || k < 0) return 0;
     return ((fact[n]*invfact[k])%MOD*invfact[n-k])%MOD;
