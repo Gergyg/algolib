@@ -11,6 +11,9 @@ struct Fraction {
         num /= gcd;
         den /= gcd;
     }
+
+    Fraction(int64_t num_) : num(num_) {
+    }
 };
 
 Fraction operator+(const Fraction& lhs, const Fraction& rhs) {
@@ -37,6 +40,6 @@ Fraction operator/(const Fraction& lhs, const Fraction& rhs) {
     return {num, den};
 }
 
-bool operator>=(const Fraction& lhs, const Fraction& rhs) {
-    return lhs.num * rhs.den >= rhs.num * lhs.den;
+bool operator<(const Fraction& lhs, const Fraction& rhs) {
+    return lhs.num * rhs.den < rhs.num * lhs.den;
 }
