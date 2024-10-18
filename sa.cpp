@@ -19,11 +19,13 @@ void build_inv_links() { // after full build
 }
 
 // ответ на запрос - вывод всех вхождений (возможно, с повторами)
-void output_all_occurences (int v, int P_length) {
-	if (! st[v].is_clon)
-		cout << st[v].first_pos - P_length + 1 << endl;
+void get_all_occurences (int v, int P_length, vector<int>& result) {
+	if (!st[v].is_clon) {
+		result.push_back(st[v].first_pos - P_length + 1);
+    }
+
 	for (size_t i=0; i<st[v].inv_link.size(); ++i)
-		output_all_occurences (st[v].inv_link[i], P_length);
+		get_all_occurences (st[v].inv_link[i], P_length, result);
 }
 
 
@@ -91,27 +93,12 @@ void sa_extend (char c) {
 	last = cur;
 }
 
+int find_state(const string& str) {
+    int cur_state = 0;
+    for (char ch : str) {
+        if(!st[cur_state].next.count(ch)) return -1;
 
-/*
-string lcs (string s, string t) {
-	sa_init();
-	for (int i=0; i<(int)s.length(); ++i)
-		sa_extend (s[i]);
- 
-	int v = 0,  l = 0,
-		best = 0,  bestpos = 0;
-	for (int i=0; i<(int)t.length(); ++i) {
-		while (v && ! st[v].next.count(t[i])) {
-			v = st[v].link;
-			l = st[v].length;
-		}
-		if (st[v].next.count(t[i])) {
-			v = st[v].next[t[i]];
-			++l;
-		}
-		if (l > best)
-			best = l,  bestpos = i;
-	}
-	return t.substr (bestpos-best+1, best);
+        cur_state = st[cur_state].next[ch];
+    }
+    return cur_state;
 }
-*/
