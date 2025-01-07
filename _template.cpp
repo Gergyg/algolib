@@ -16,7 +16,7 @@ typedef vector<vector<ll>> vvi;
 typedef pair<ll,ll> pll;
 typedef vector<pll> vpll;
 #ifdef DEBUG
-    #define debug(...) (std::cout << "DBG : ", show(std::cout, #__VA_ARGS__, __VA_ARGS__))
+    #define debug(...) (std::cerr << "DBG : ", show(std::cerr, #__VA_ARGS__, __VA_ARGS__))
     template<typename H1>
     std::ostream& show(std::ostream& out, const char* label, H1&& value) {
         return out << label << "=" << std::forward<H1>(value) << '\n';
